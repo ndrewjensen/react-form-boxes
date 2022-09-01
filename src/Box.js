@@ -1,10 +1,9 @@
-
 /** Box UI
  *
  * Props:
  * - box {width,height,color,id}
  * - removeBox function
- * 
+ *
  * State: None
  *
  * BoxList -> Box
@@ -21,9 +20,7 @@ function Box({ box, removeBox }) {
   return (
     <div className="Box">
       <div style={styles}></div>
-      <button 
-          className="Box-removeBox" 
-          onClick={(evt) => removeBox(id)}>
+      <button className="Box-removeBox" onClick={(evt) => removeBox(id)}>
         X
       </button>
     </div>

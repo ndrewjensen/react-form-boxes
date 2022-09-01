@@ -33,9 +33,7 @@ function BoxList() {
       <NewBoxForm addBox={addBox} />
       <ul>
         {boxes.map((box) => (
-          <div key={box.id}>
-            <Box box={box} removeBox={removeBox} />
-          </div>
+            <Box key={box.id} box={box} removeBox={removeBox} />
         ))}
       </ul>
     </div>
