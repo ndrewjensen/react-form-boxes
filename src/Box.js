@@ -1,22 +1,33 @@
-import NewBoxForm from './NewBoxForm'
 
+/** Box UI
+ *
+ * Props:
+ * - box {width,height,color,id}
+ * - removeBox function
+ * 
+ * State: None
+ *
+ * BoxList -> Box
+ */
 
-function Box({box, removeBox}){
-  const {width, height, color, id} = box;
+function Box({ box, removeBox }) {
+  const { width, height, color, id } = box;
   const styles = {
     width: `${width}px`,
     height: `${height}px`,
-    backgroundColor: color
-  }
+    backgroundColor: color,
+  };
 
-  return(
-    <div>
+  return (
+    <div className="Box">
       <div style={styles}></div>
-      <button onClick={evt => removeBox(id)}>x</button>
+      <button 
+          className="Box-removeBox" 
+          onClick={(evt) => removeBox(id)}>
+        X
+      </button>
     </div>
-  )
+  );
 }
-//QUESTION:background-color syntax
-// style={`width:${box.width} height:${box.height} background-color:${box.color}`}
 
-export default Box
+export default Box;
